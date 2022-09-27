@@ -72,12 +72,7 @@ function PaperTree() {
   
 
   const fetchData = async () => {
-    const header = {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${localStorage.token}`,
-
-    }
-    const data={id:58}
+   
     try {
       const res = await axios.get(
         // "https://jsonplaceholder.typicode.com/todos/1",
