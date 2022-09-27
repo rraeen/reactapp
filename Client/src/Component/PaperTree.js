@@ -77,7 +77,7 @@ function PaperTree() {
       const res = await axios.get(
         // "https://jsonplaceholder.typicode.com/todos/1",
         // `https://invoiceapi.nachpay.com/invoice/read/${JSON.stringify(data)}`
-        `https://invoiceapi.nachpay.com/invoice/read/user?id=58`
+        "https://invoiceapi.nachpay.com/invoice/read/?id=2"
       );
       console.log(res);
     } catch (err) {
@@ -164,29 +164,32 @@ function PaperTree() {
                     <Input
                       name="Branch"
                       placeholder={allData.Branch?allData.Branch:""}
-                      value={userData.Branch}
-                    //    value={allData.Branch?allData.Branch:userData.Branch}
+                    //   value={userData.Branch}
+                       value={allData.Branch?allData.Branch:userData.Branch}
                       onChange={handleChange}
                     />
                     <label>Pay To Bank</label>
                     <Input  
                      name="Pay_to_bank"
                       placeholder={allData.Pay_to_bank?allData.Pay_to_bank:""}
-                      value={userData.Pay_to_bank}
+                    //   value={userData.Pay_to_bank}
+                    value={allData.Pay_to_bank?allData.Pay_to_bank:userData.Pay_to_bank}
                       onChange={handleChange} />
                   </Col>
                   <Col span={12} offset={2}>
                     <label>ERP Code</label>
                     <Input
                       name="Erp_Code"
-                      value={userData.Erp_Code}
+                    //   value={userData.Erp_Code}
+                    value={allData.Erp_Code?allData.Erp_Code:userData.Erp_Code}
                       onChange={handleChange}
                       placeholder={allData.Erp_Code?allData.Erp_Code:""}
                     />
                     <label>Account Owner</label>
                     <Input  name="Account_owner"
                       placeholder={allData.Erp_Code?allData.Erp_Code:""}
-                      value={userData.Account_owner}
+                    //   value={userData.Account_owner}
+                    value={allData.Account_owner?allData.Account_owner:userData.Account_owner}
                       onChange={handleChange} />
                   </Col>
 
@@ -198,33 +201,38 @@ function PaperTree() {
                     <label>Invoice Number</label>
                     <Input
                       name="Invoice_number"
-                      value={userData.Invoice_number}
+                    //   value={userData.Invoice_number}
+                    value={allData.Invoice_number?allData.Invoice_number:userData.Invoice_number}
                       onChange={handleChange}
                       placeholder={allData.Invoice_number?allData.Invoice_number:""}
                     />
                     <label>Taxable Amount</label>
                     <Input
                       name="taxable_amount"
-                      value={userData.taxable_amount}
+                    //   value={userData.taxable_amount}
                       onChange={handleChange}
+                      value={allData.taxable_amount?allData.taxable_amount:userData.taxable_amount}
                       placeholder={allData.taxable_amount?allData.taxable_amount:""}
                     />
                   </Col>
                   <Col span={12} offset={2}>
                     <label>Date</label>
                     <br />
-                    <input
+                    <Input
                       type="date"
                       name="date"
-                      value={userData.date}
+                    //   value={userData.date}
+                    value={allData.date?allData.date:userData.date}
                       onChange={handleChange}
                       placeholder={allData.Date?allData.Date:""}
                     />
                     <br />
                     <label>Due Date</label>
                     <Input
+                    type="date"
                       name="due_date"
-                      value={userData.due_date}
+                    //   value={userData.due_date}
+                    value={allData.due_date?allData.due_date:userData.due_date}
                       onChange={handleChange}
                       placeholder={allData.due_date?allData.due_date:""}
                     />
@@ -238,7 +246,8 @@ function PaperTree() {
                         <label>GST Value</label>
                         <Input
                           name="GST_value"
-                          value={userData.GST_value}
+                        //   value={userData.GST_value}
+                        value={allData.GST_value?allData.GST_value:userData.GST_value}
                           onChange={handleChange}
                           placeholder={allData.GST_value?allData.GST_value:""}
                         />
@@ -247,7 +256,9 @@ function PaperTree() {
                         <label>TDS-TCS</label>
                         <Input
                           name="TDS_TCS"
-                          value={userData.TDS_TCS}
+                        //   value={userData.TDS_TCS}
+                        value={allData.TDS_TCS?allData.TDS_TCS:userData.TDS_TCS}
+
                           onChange={handleChange}
                           placeholder={allData.TDS_TCS?allData.TDS_TCS:""}
                         />
@@ -258,7 +269,8 @@ function PaperTree() {
                     <label>Credit Period</label>
                     <Input
                       name="Credit_Period"
-                      value={userData.Credit_Period}
+                    //   value={userData.Credit_Period}
+                    value={allData.Credit_Period?allData.Credit_Period:userData.Credit_Period}
                       onChange={handleChange}
                       placeholder={allData.Credit_Period?allData.Credit_Period:""}
                     />
@@ -271,7 +283,8 @@ function PaperTree() {
                     </label>
                     <Input
                       name="Invoice_Total"
-                      value={userData.Invoice_Total}
+                    //   value={userData.Invoice_Total}
+                    value={allData.Invoice_Total?allData.Invoice_Total:userData.Invoice_Total}
                       onChange={handleChange}
                       placeholder={allData.Invoice_Total?allData.Invoice_Total:""}
                     />
@@ -280,7 +293,8 @@ function PaperTree() {
                     </label>
                     <Input
                       name="Receivable_amount"
-                      value={userData.Receivable_amount}
+                    //   value={userData.Receivable_amount}
+                    value={allData.Receivable_amount?allData.Receivable_amount:userData.Receivable_amount}
                       onChange={handleChange}
                       placeholder={allData.Receivable_amount?allData.Receivable_amount:""}
                     />
@@ -289,14 +303,18 @@ function PaperTree() {
                     <label>Other</label>
                     <Input
                       name="other"
-                      value={userData.other}
+                    //   value={userData.other}
+                    value={allData.other?allData.other:userData.other}
+                    
                       onChange={handleChange}
                       placeholder={allData.other?allData.other:""}
                     />
                     <label>Amount Received</label>
                     <Input
                       name="Amount_Received"
-                      value={userData.Amount_Received}
+                    //   value={userData.Amount_Received}
+                    value={allData.Amount_Received?allData.Amount_Received:userData.Amount_Received}
+
                       onChange={handleChange}
                       placeholder={allData.Amount_Received?allData.Amount_Received:""}
                     />
