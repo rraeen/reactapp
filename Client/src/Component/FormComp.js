@@ -8,7 +8,7 @@ function FormComp() {
 
 
 <Upload>
-    <Button icon={<UploadOutlined />}>Click to Upload</Button>
+    <Button icon={<UploadOutlined />}>Docket</Button>
   </Upload>
     
     

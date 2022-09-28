@@ -8,10 +8,7 @@ import FormComp from './Component/FormComp';
 function App() {
   return (
     <>
-   
-  
   <PaperTree/>
-  {/* <FormComp/> */}
     </>
     
   );

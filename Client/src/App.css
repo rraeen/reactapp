@@ -57,4 +57,34 @@
   margin: 2% !important;
 }
 
-section{}
+.secondSidebtn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sbtn{
+  width: 30%;
+  margin-top: 3%;
+
+}
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+
+}
+.bbtn{
+  margin-right: 1%;
+}
+.pbox{
+  border: 1px sikud gray !important;
+  height: 100%;
+  width: 100%;
+}
+.uploadbox{
+  border:1px solid gray;
+  height: 85%;
+  margin: 2%;
+
+  /* style={{border:'1px solid gray', height:'85%', marginTop:'2%', marginBottom:'5%'}} */
+}
